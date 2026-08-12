@@ -1,8 +1,8 @@
 name: Deploy demo to GitHub Pages
 
 # Publishes web/ — a self-contained page with no build step and no secrets.
-# After the first successful run, enable Pages in
-# Settings → Pages → Source: GitHub Actions.
+# `enablement: true` below turns Pages on for the repository on the first run,
+# so a fresh clone or fork needs no manual setup.
 
 on:
   push:
@@ -30,6 +30,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: web
