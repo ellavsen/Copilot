@@ -1,0 +1,63 @@
+# ─── Секреты: НИКОГДА не коммитить ────────────────────────────────
+.env
+.env.*
+!.env.example
+credentials.json
+*credentials*.json
+service-account*.json
+*.pem
+*.key
+secrets/
+
+# ─── Python ───────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+venv/
+.venv/
+env/
+ENV/
+.python-version
+
+# ─── Тесты / линтеры / типы ───────────────────────────────────────
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# ─── Данные и модели (тяжёлое, пересоздаётся скриптом) ────────────
+data/vector_db/
+data/*.faiss
+data/*.pkl
+*.faiss
+*.pkl
+.cache/
+models/
+
+# ─── Локальная БД ─────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ─── Логи ─────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ─── ОС и редакторы ───────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# ─── Node (для веб-демо) ──────────────────────────────────────────
+node_modules/
